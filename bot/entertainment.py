@@ -15,7 +15,7 @@ async def asupan(client, message):
         results = f"{resp['url']}"
         return await client.send_video(message.chat.id, video=results)
     except Exception as ex:
-        await message.reply_text("failed to get asupan from server...")
+        await message.reply_text("gagal mendapatkan asupan dari server...")
         print(ex)
 
 
@@ -27,7 +27,7 @@ async def wibu(client, message):
         return await client.send_video(message.chat.id, video=results)
     except Exception as ex:
         print(ex)
-        await message.reply_text("failed to get wibu from server...")
+        await message.reply_text("gagal mendapatkan wibu dari server...")
 
 
 @Client.on_message(command(["chika", f"chika@{Veez.BOT_USERNAME}"]))
@@ -38,7 +38,7 @@ async def chika(client, message):
         return await client.send_video(message.chat.id, video=results)
     except Exception as ex:
         print(ex)
-        await message.reply_text("failed to get chika from server...")
+        await message.reply_text("gagal mendapatkan Chika dari server...")
 
 
 @Client.on_message(command(["truth", f"truth@{Veez.BOT_USERNAME}"]))
@@ -49,7 +49,7 @@ async def truth(_, message):
         return await message.reply_text(results)
     except Exception as ex:
         print(ex)
-        await message.reply_text("something went wrong...")
+        await message.reply_text("ada yang salah...")
 
 
 @Client.on_message(command(["dare", f"dare@{Veez.BOT_USERNAME}"]))
@@ -60,15 +60,15 @@ async def dare(_, message):
         return await message.reply_text(results)
     except Exception as ex:
         print(ex)
-        await message.reply_text("something went wrong...")
+        await message.reply_text("ada yang salah...")
 
 
 @Client.on_message(command(["lyric", f"lyric@{Veez.BOT_USERNAME}"]))
 async def lirik(_, message):
-    rep = await message.reply_text("🔎 **searching lyrics...**")
+    rep = await message.reply_text("🔎 **mencari lirik lagu...**")
     try:
         if len(message.command) < 2:
-            await message.reply_text("**give a lyric name too !**")
+            await message.reply_text("**berikan nama lirik lagunya juga !**")
             return
         query = message.text.split(None, 1)[1]
         resp = requests.get(f"https://api-tede.herokuapp.com/api/lirik?l={query}").json()
@@ -76,4 +76,4 @@ async def lirik(_, message):
         await rep.edit(result)
     except Exception as ex:
         print(ex)
-        await rep.edit("**Lyrics not found.** please give a valid song name !")
+        await rep.edit("**Lirik tidak ditemhkan.** Tolong berikan saya nama lagu yang valid !")
