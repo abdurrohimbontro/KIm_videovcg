@@ -18,7 +18,7 @@ async def entergroup(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>💡 promote me as admin first to do that !</b>",
+            "<b>💡 jadikan saya sebagai admin terlebih dahulu untuk melakukan itu !</b>",
         )
         return
 
@@ -29,19 +29,19 @@ async def entergroup(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for streaming video on video chat")
+        await USER.send_message(message.chat.id, "🤖: saya bergabung di sini untuk streaming video di obrolan video/obrolan suara")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>✅ assistant already entered this group</b>",
+            "<b>✅ asisten berhasil masuk ke grup ini</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🔴 FLOODWAIT ERROR 🔴\n\n user {user.first_name} couldn't join your group due to heavy join requests for userbot! make sure assistant is not banned in this group."
+            f"<b>🔴 KESALAHAN FLOODWAIT 🔴\n\n pengguna {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! pastikan asisten tidak dilarang di grup ini.."
         )
         return
     await message.reply_text(
-        "<b>✅ assistant userbot joined your chat</b>",
+        "<b>✅ asisten bot berhasil bergabung dengan obrolan Anda</b>",
     )
 
 
@@ -52,10 +52,9 @@ async def leavegroup(client, message):
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            "<b>❌ assistant can't leave from group because floodwaits.\n\n» you can manually kick me from this group</b>"
+            "<b>❌ asisten tidak dapat keluar dari grup karena menunggu banjir.\n\n» anda dapat mengeluarkanya secara manual</b>"
         )
 
-        return
 
 
 @Client.on_message(command(["leaveall", f"leaveall@{Veez.BOT_USERNAME}"]))
@@ -65,14 +64,14 @@ async def outall(client, message):
 
     left=0
     failed=0
-    lol = await message.reply("🔁 assistant leaving all chats")
+    lol = await message.reply("🔁 asisten meninggalkan semua obrolan")
     async for dialog in USER.iter_dialogs():
         try:
             await USER.leave_chat(dialog.chat.id)
             left += 1
-            await lol.edit(f"🔁 assistant leaving...\n⏳ Left: {left} chats.\n\n❌ Failed: {failed} chats.")
+            await lol.edit(f"🔁 asisten pergi...\n⏳ Left: {left} chats.\n\n❌ Failed: {failed} chats.")
         except:
             failed += 1
-            await lol.edit(f"🔁 assistant leaving...\n⏳ Left: {left} chats.\n\n❌ Failed: {failed} chats.")
+            await lol.edit(f"🔁 asisten pergi...\n⏳ Left: {left} chats.\n\n❌ Failed: {failed} chats.")
         await asyncio.sleep(0.7)
     await client.send_message(message.chat.id, f"✅ Left {left} chats.\n\n❌ Failed {failed} chats.")
