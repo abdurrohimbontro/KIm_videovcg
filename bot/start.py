@@ -61,14 +61,14 @@ async def start(_, m: Message):
                 ]]
             ))
     else:
-        await m.reply_text("**✨ bot is online now ✨**",
+        await m.reply_text("**✨ bot sedang online ✨**",
                            reply_markup=InlineKeyboardMarkup(
                                [[
                                    InlineKeyboardButton(
-                                       "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                                       "❔ BAGAIMANA CARA MENGGUNAKAN BOT INI", callback_data="cbguide")
                                ], [
                                    InlineKeyboardButton(
-                                       "🌐 Search Youtube", switch_inline_query='')
+                                       "🌐 cari di YouTube", switch_inline_query='')
                                ], [
                                    InlineKeyboardButton(
                                        "📚 Daftar perintah", callback_data="cblist")
