@@ -35,26 +35,26 @@ async def _human_time_duration(seconds):
 async def start(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
-            f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
-            f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
-            reply_markup=InlineKeyboardMarkup(
+            f"✨ **Halo, saya bot streaming video grup telegram.**\n\n💭 **Saya dibuat untuk streaming video dalam grup "
+            f"video chat dengan mudah.**\n\n❔ **To find out how to use me, Untuk mengetahui cara menggunakan saya, silakan tekan tombol bantuan di bawah** 👇🏻",
+            reply_markup=InlineKeyboardMarkup( 
                 [[
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
+                        "➕ TAMBAHKAN SAYA KE GRUP ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
                 ], [
                     InlineKeyboardButton(
-                        "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                        "❔ BAGAIMANA CARA MENGGUNAKAN SAYA", callback_data="cbguide")
                 ], [
                     InlineKeyboardButton(
-                        "🌐 Terms & Condition", callback_data="cbinfo")
+                        "🌐 syarat & ketentuan", callback_data="cbinfo")
                 ], [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/VeezSupportGroup"),
+                        "💬 Grup", url="https://t.me/crazy_people345"),
                     InlineKeyboardButton(
-                        "📣 Channel", url="https://t.me/levinachannel")
+                        "📣 Channel", url="https://t.me/Curhatanmassa")
                 ], [
                     InlineKeyboardButton(
-                        "👩🏻‍💻 Developer", url="https://t.me/dlwrml")
+                        "👩🏻‍💻 bantuan", url="https://t.me/warga_pati")
                 ], [
                     InlineKeyboardButton(
                         "📚 All Command List", callback_data="cblist")
@@ -71,7 +71,7 @@ async def start(_, m: Message):
                                        "🌐 Search Youtube", switch_inline_query='')
                                ], [
                                    InlineKeyboardButton(
-                                       "📚 Command List", callback_data="cblist")
+                                       "📚 Daftar perintah", callback_data="cblist")
                                ]]
                            )
                            )
@@ -83,15 +83,15 @@ async def alive(_, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        f"""✅ **bot is running**\n<b>💠 **uptime:**</b> `{uptime}`""",
+        f"""✅ **bot sedang berjalan**\n<b>💠 **waktu aktif:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ Group", url=f"https://t.me/VeezSupportGroup"
+                        "✨ Grup", url=f"https://t.me/Crazy_people345"
                     ),
                     InlineKeyboardButton(
-                        "📣 Channel", url=f"https://t.me/levinachannel"
+                        "📣 Channel", url=f"https://t.me/Curhatanmassa"
                     )
                 ]
             ]
@@ -105,8 +105,8 @@ async def ping_pong(_, m: Message):
     m_reply = await m.reply_text("pinging...")
     delta_ping = time() - sturt
     await m_reply.edit_text(
-        "🏓 `PONG!!`\n"
-        f"⚡️ `{delta_ping * 1000:.3f} ms`"
+        "💇 `PUNK!!`\n"
+        f"⚡ `{delta_ping * 1000:.3f} ms`"
     )
 
 
@@ -117,7 +117,7 @@ async def get_uptime(_, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        "🤖 bot status 🤖\n\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "🤖 Status bot 🤖\n\n"
+        f"• **waktu aktif:** `{uptime}`\n"
+        f"• **waktu mulai:** `{START_TIME_ISO}`"
     )
