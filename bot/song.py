@@ -27,7 +27,7 @@ def song(_, message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    m = message.reply("🔎 finding song...")
+    m = message.reply("🔎 menemukan lagu...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -40,10 +40,10 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ song not found.\n\nplease give a valid song name.")
+        m.edit("❌ lagune Ra ketemu.\n\nTolong beri judul lagu/penyanyi yang valid.")
         print(str(e))
         return
-    m.edit("📥 downloading...")
+    m.edit("📥 ndownload...")
     try:
         with youtube_dl.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -64,7 +64,7 @@ def song(_, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ error, wait for dev to fix")
+        m.edit("❌ kesalahan, tunggu untuk memperbaiki perangkat")
         print(e)
 
     try:
@@ -109,7 +109,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**File Name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**nama file:** `{}`\n{}".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -230,7 +230,7 @@ async def vsong(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    k = await message.reply_text("🔎 **searching video...**")
+    k = await message.reply_text("🔎 **nggoleki video...**")
     ydl_ops = {
         "format": "best[ext=mp4]",
         "geo-bypass": True,
@@ -258,30 +258,30 @@ async def vsong(_, message: Message):
         except Exception as e:
             print(e)
             await k.edit(
-                '❌ **video not found, please give a valid video name.\n\n» if you think this is an error report to '
-                '@VeezSupportGroup**')
+                '❌ **video Ra ketemu, tolong berikan nama video yang valid.\n\n» jika menurut kamu ini adalah sebuah kesalahan, laporkan ke'
+                '@crazy_people345**')
             return
     except Exception as e:
         await k.edit(
-            "💡 **please give a video name too you want to download.**\n\n» for example: `/vsong runaway`"
+            "💡 **Tolong berikan nama video yang ingin kamu download.**\n\n» untuk contoh: `/vsong jangan menyerah`"
         )
         print(str(e))
         return
-    await k.edit("📥 **downloading file...**")
+    await k.edit("📥 **ndownload file...**")
     try:
         with youtube_dl.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             video_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        caption = f"🏷 Name: {title}\n💡 Views: `{views}`\n🎧 Request by: {message.from_user.mention()}\n\n⚡ " \
-                  f"__Powered by Veez Music A.I__ "
-        buttons = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 Close", callback_data="cls")]])
-        await k.edit("📤 **uploading file...**")
+        caption = f"🏷 Nama: {title}\n💡 ditonton: `{views}`\n🎧 Request dari: {message.from_user.mention()}\n\n😉 " \
+                  f"__Powered by KIM official A.I__ ✍️"
+        buttons = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 buang", callback_data="cls")]])
+        await k.edit("📤 **ngunggah file...**")
         await message.reply_video(video_file, caption=caption, duration=duration, thumb=thumb_name,
                                   reply_markup=buttons, supports_streaming=True)
         await k.delete()
     except Exception as e:
-        await k.edit(f'❌ **something went wrong !** \n`{e}`')
+        await k.edit(f'🤔 **ada yang salah  !** \n`{e}`')
         pass
     try:
         os.remove(video_file)
