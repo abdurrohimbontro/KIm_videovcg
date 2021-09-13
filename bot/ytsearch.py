@@ -14,19 +14,19 @@ from helpers.filters import command
 
 @app.on_message(command(["search", f"search@{Veez.BOT_USERNAME}"]))
 async def ytsearch(_, message: Message):
-    m = await message.reply_text("🔎 **searching url...**")
+    m = await message.reply_text("🔎 **pencarian url...**")
     try:
         if len(message.command) < 2:
-            await message.reply_text("`/search` needs an argument!")
+            await message.reply_text("`/search` mencari argumen!")
             return
         query = message.text.split(None, 1)[1]
         results = YoutubeSearch(query, max_results=5).to_dict()
         i = 0
         text = ""
         while i < 5:
-            text += f"**Name:** `{results[i]['title']}`\n"
-            text += f"**Duration:** {results[i]['duration']}\n"
-            text += f"**Views:** {results[i]['views']}\n"
+            text += f"**nama:** `{results[i]['title']}`\n"
+            text += f"**Durasi:** {results[i]['duration']}\n"
+            text += f"**ditonton:** {results[i]['views']}\n"
             text += f"**Channel:** {results[i]['channel']}\n"
             text += f"https://www.youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
