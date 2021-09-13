@@ -79,10 +79,10 @@ async def startvideo(client, m: Message):
                 [
                     InlineKeyboardButton(
                         text="✨ ɢʀᴏᴜᴘ",
-                        url="https://t.me/VeezSupportGroup"),
+                        url="https://t.me/crazy_people345"),
                     InlineKeyboardButton(
                         text="🌻 ᴄʜᴀɴɴᴇʟ",
-                        url="https://t.me/levinachannel")
+                        url="https://t.me/Curhatanmassa")
                 ]
             ]
         )
@@ -90,7 +90,7 @@ async def startvideo(client, m: Message):
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
-            await m.reply("💡 **reply to video or provide youtube/live video url to start video streaming**")
+            await m.reply("💡 **cooook!!! Gobloke i lho ah, balas video atau berikan url youtube/video langsung untuk memulai streaming video**")
         else:
             livelink = m.text.split(None, 1)[1]
             chat_id = m.chat.id
@@ -103,14 +103,14 @@ async def startvideo(client, m: Message):
                     timeout=None
                 )
             except asyncio.TimeoutError:
-                await m.reply("TimeoutError: process is taking unexpected time")
+                await m.reply("TimeoutError: masukkan perintah yang benar")
                 return
             if not livelink:
-                await m.reply("failed to get video data")
+                await m.reply("gagal mendapatkan data video")
                 return
             process = raw_converter(livelink, f'audio{chat_id}.raw', f'video{chat_id}.raw')
             FFMPEG_PROCESS[chat_id] = process
-            msg = await m.reply("🔁 **starting video streaming...**")
+            msg = await m.reply("🔁 **memulai video streaming 😉...**")
             await asyncio.sleep(10)
             try:
                 audio_file = f'audio{chat_id}.raw'
@@ -137,19 +137,19 @@ async def startvideo(client, m: Message):
                     stream_type=StreamType().local_stream,
                 )
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/422650a849a8d6831bde8.png",
+                    photo="https://telegra.ph/file/be9f39a7ed4a1cac9c5b1.png",
                     reply_markup=keyboard,
-                    caption=f"💡 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)}`\n\n» **join to video chat on the top to watch the video.**")
+                    caption=f"💡 **video streaming di mulai!**\n\n🏷 **Nama:** {title}\n⏱ **Durasi:** `{convert_seconds(duration)}`\n\n» **mlebuo obrolan suara/vcg NK ape ndelok video.**")
                 return await msg.delete()
                 await idle()
             except Exception as e:
                 await msg.edit(f"🚫 **error** | `{e}`")
    
     elif replied.video or replied.document:
-        msg = await m.reply("📥 downloading video...")
+        msg = await m.reply("📥 ndownload video...")
         video = await client.download_media(m.reply_to_message)
         chat_id = m.chat.id
-        await msg.edit("🔁 **preparing video...**")
+        await msg.edit("🔁 **lagi nyiapno video...**")
         os.system(f"ffmpeg -i '{video}' -f s16le -ac 1 -ar 48000 'audio{chat_id}.raw' -y -f rawvideo -r 20 -pix_fmt yuv420p -vf scale=640:360 'video{chat_id}.raw' -y")
         try:
             audio_file = f'audio{chat_id}.raw'
@@ -176,15 +176,15 @@ async def startvideo(client, m: Message):
                 stream_type=StreamType().local_stream,
             )
             await m.reply_photo(
-                photo="https://telegra.ph/file/dc90e91cc77e68568e7b4.png",
+                photo="https://telegra.ph/file/be9f39a7ed4a1cac9c5b1.png",
                 reply_markup=keyboard,
-                caption=f"💡 **video streaming started !**\n\n» **join to video chat on the top to watch the video.**")
+                caption=f"💡 **video streaming wes di mulai !**\n\n» **gabung obrolan suara/vcg NK ape Melu ndelok.**")
             return await msg.delete()
         except Exception as e:
             await msg.edit(f"🚫 **error** | `{e}`")
             await idle()
     else:
-        await m.reply("💭 please reply to video or video file to stream")
+        await m.reply("💭 tolong balas ke video atau file video untuk streaming")
 
 
 @Client.on_message(command(["vstop", f"vstop@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
@@ -201,7 +201,7 @@ async def stopvideo(client, m: Message):
                 print(e)
                 pass
         await call_py.leave_group_call(chat_id)
-        await m.reply("✅ **successfully left vc !**")
+        await m.reply("✅ **berhasil meninggalkan vcg !**")
     except Exception as e:
         await m.reply(f"🚫 **error** | `{e}`")
 
@@ -217,7 +217,7 @@ async def chstream(client, m: Message):
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
-            await m.reply("💡 **reply to video or provide youtube/live video url to start video streaming**")
+            await m.reply("💡 **tolong balas ke video atau file video untuk streaming**")
         else:
             livelink = m.text.split(None, 1)[1]
             chat_id = Veez.CHANNEL
@@ -230,14 +230,14 @@ async def chstream(client, m: Message):
                     timeout=None
                 )
             except asyncio.TimeoutError:
-                await m.reply("TimeoutError: process is taking unexpected time")
+                await m.reply("TimeoutError: aku kesel ngenteni Ra Ono hasile")
                 return
             if not livelink:
-                await m.reply("failed to get video data")
+                await m.reply("gagal mendapatkan data video")
                 return
             process = raw_converter(livelink, f'audio{chat_id}.raw', f'video{chat_id}.raw')
             FFMPEG_PROCESS[chat_id] = process
-            msg = await m.reply("🔁 **starting video streaming...**")
+            msg = await m.reply("🔁 **memulai video streaming...**")
             await asyncio.sleep(10)
             try:
                 audio_file = f'audio{chat_id}.raw'
@@ -263,16 +263,16 @@ async def chstream(client, m: Message):
                     ),
                     stream_type=StreamType().local_stream,
                 )
-                await msg.edit("💡 **video streaming channel started !**")
+                await msg.edit("💡 **video streaming channel di mulai !**")
                 await idle()
             except Exception as e:
                 await msg.edit(f"🚫 **error** - `{e}`")
    
     elif replied.video or replied.document:
-        msg = await m.reply("📥 **downloading video...**")
+        msg = await m.reply("📥 **ndownload video...**")
         video = await client.download_media(m.reply_to_message)
         chat_id = Veez.CHANNEL
-        await msg.edit("🔁 **preparing video...**")
+        await msg.edit("🔁 **lagi nyiapno video...**")
         os.system(f"ffmpeg -i '{video}' -f s16le -ac 1 -ar 48000 'audio{chat_id}.raw' -y -f rawvideo -r 20 -pix_fmt yuv420p -vf scale=640:360 'video{chat_id}.raw' -y")
         try:
             audio_file = f'audio{chat_id}.raw'
@@ -298,12 +298,12 @@ async def chstream(client, m: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-            await msg.edit("💡 **video streaming channel started !**")
+            await msg.edit("💡 **video streaming channel di mulai !**")
         except Exception as e:
             await msg.edit(f"🚫 **error** - `{e}`")
             await idle()
     else:
-        await m.reply("💭 **please reply to video or video file to stream**")
+        await m.reply("💭 **tolong balas ke video atau file video untuk streaming**")
 
 
 @Client.on_message(command(["cstop", f"cstop@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
@@ -320,6 +320,6 @@ async def chstopvideo(client, m: Message):
                 print(e)
                 pass
         await call_py.leave_group_call(chat_id)
-        await m.reply("✅ **video streaming channel ended**")
+        await m.reply("✅ **video streaming channel di akhiri**")
     except Exception as e:
         await m.reply(f"🚫 **error** - `{e}`")
