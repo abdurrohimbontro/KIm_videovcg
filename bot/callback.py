@@ -7,22 +7,22 @@ from config import Veez
 @Client.on_callback_query(filters.regex("cbguide"))
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ HOW TO USE THIS BOT:
+        f"""❓ BAGAIMANA CARA MENGGUNAKAN BOT INI:
 
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{Veez.ASSISTANT_NAME } to your group.
-4.) turn on the voice chat first before start to stream video.
-5.) type /vplay (reply to video) to start streaming.
-6.) type /vstop to end the video streaming.
+1.) pertama, masukkan saya ke grup kamu
+2.) Jadikan saya admin ,dan beri ijin untuk menambahkan admin baru
+3.) Masukkan  @{Veez.ASSISTANT_NAME } ke grup kamu
+4.) Nyalakan obrolan suara setelah itu start untuk streaming video.
+5.) type /vplay (reply to video) untu6 memulai.
+6.) type /vstop untuk mengakhiri video streaming.
 
-📝 **note: stream & stop command can only be executed by group admin only!**
+📝 **Catatan: perintah stream & stop hanya dapat dilakukan oleh admin dalam grup !**
 
-⚡ __Maintained by Veez Project Team__""",
+⚡ __Maintained by KIM officiak__""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Go Back", callback_data="cbstart")
+                    "🏡 Kembali", callback_data="cbstart")
             ]]
         ))
 
@@ -30,29 +30,29 @@ async def cbguide(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
-        f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
+        f"✨ **Halo, saya bot streaming video grup telegram.**\n\n💭 **Saya dibuat untuk streaming video dalam grup  "
+        f"video chat dengan mudah..**\n\n❔ **To find out how to use me, Untuk mengetahui cara menggunakan saya, silakan tekan tombol bantuan di bawah** 👇🏻",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "➕ Add me to your Group ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
+                    "➕ TAMBAKAN SAYA KE GRUP ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
             ], [
                 InlineKeyboardButton(
-                    "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                    "❔ BAGAIMANA CARA MENGGUNAKAN SAYA", callback_data="cbguide")
             ], [
                 InlineKeyboardButton(
-                    "🌐 Terms & Condition", callback_data="cbinfo")
+                    "🌐 syarat & ketentuan", callback_data="cbinfo")
             ], [
                 InlineKeyboardButton(
-                    "💬 Group", url="https://t.me/VeezSupportGroup"),
+                    "💬 Grup", url="https://t.me/Crazy_people345"),
                 InlineKeyboardButton(
-                    "📣 Channel", url="https://t.me/levinachannel")
+                    "📣 Channel", url="https://t.me/Curhatanmassa")
             ], [
                 InlineKeyboardButton(
-                    "👩🏻‍💻 Developer", url="https://t.me/dlwrml")
+                    "👩🏻‍💻 Bantuan", url="https://t.me/warga_pati")
             ], [
                 InlineKeyboardButton(
-                    "📚 All Command List", callback_data="cblist")
+                    "📚 Semua perintah", callback_data="cblist")
             ]]
         ))
 
@@ -60,24 +60,19 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbinfo"))
 async def cbinfo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🌐 **bot information !**
+        f"""🌐 **informasi bot !**
 
-🤖 __This bot was created to stream video in telegram group video chats using several methods from WebRTC.__
+🤖 __Bot ini dibuat untuk melakukan streaming video dalam obrolan video grup telegram menggunakan beberapa metode dari WebRTC.__
 
-💡 __Powered by PyTgcalls the Async client API for the Telegram Group Calls, and Pyrogram the telegram MTProto API 
-Client Library and Framework in Pure Python for Users and Bots.__
+📳 __Didukung oleh PyTg memanggil API klien Async untuk Panggilan Grup Telegram, dan Pyrogram API MTProto telegram
+Pustaka dan Kerangka Klien dalam Python Murni untuk Pengguna dan Bot.__
 
-👨🏻‍💻 __Thanks to the developers who participated in the development of this bot, the list of devs can be seen below:__
-
-👩🏻‍✈️ » [Levina Shavila](https://github.com/levina-lab)
-🤵🏻 » [Sammy-XD](https://github.com/Sammy-XD)
-🤵🏻 » [Zxce3](https://github.com/Zxce3)
-
-__This bot licensed under GNU-GPL 3.0 License__""",
+✍️ __Terima kasih kepada para pengembang yang telah berpartisipasi dalam pengembangan bot ini, daftar devs dapat dilihat di bawah ini:__
+___Bot ini dilisensikan di bawah Lisensi GNU-GPL 3.0____""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Go Back", callback_data="cbstart")
+                    "🏡 Kembali", callback_data="cbstart")
             ]]
         ),
         disable_web_page_preview=True
@@ -87,43 +82,43 @@ __This bot licensed under GNU-GPL 3.0 License__""",
 @Client.on_callback_query(filters.regex("cblist"))
 async def cblist(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""📚 All Command List:
+        f"""📚 semua perintah:
 
-» /vplay (reply to video or yt/live url) - to stream video
-» /vstop - stop the video streaming
-» /song (song name) - download song from YT
-» /vsong (video name) - download video from YT
-» /lyric (song name) - lyric scrapper
-» /vjoin - invite assistant join to your group
-» /vleave - order assistant leave from your group
+» /vplay (balas ke video atau yt/url langsung) - untuk streaming video
+» /vstop - hentikan streaming video
+» /song (nama lagu) - download lagu dari YT
+» /vsong (nama video) - unduh video dari YT
+» /lyrics (nama lagu) - penghapus lirik
+» /vjoin - undang asisten bergabung ke grup Anda
+» /vleave - perintahkan asisten keluar dari grup Anda
 
-🎊 FUN CMD:
+CMD MENYENANGKAN:
 
-» /asupan - check it by yourself
-» /chika - check it by yourself
-» /wibu - check it by yourself
-» /truth - check it by yourself
-» /dare - check it by yourself
+» /asupan - cek sendiri
+» /chika - cek sendiri
+» /wibu - cek sendiri
+» /truth - periksa sendiri
+» /dare - periksa sendiri
 
-🔰 EXTRA CMD:
+CMD TAMBAHAN:
 
-» /tts (reply to text) - text to speech
-» /alive - check bot alive status
-» /ping - check bot ping status
-» /uptime - check bot uptime status
-» /sysinfo - check bot system information
+» /tts (membalas teks) - teks ke ucapan
+» /alive - periksa status hidup bot
+» /ping - periksa status bot ping
+» /uptime - periksa status uptime bot
+» /sysinfo - periksa informasi sistem bot
 
-💡 SUDO ONLY:
+HANYA SUDO:
 
-» /rmd - remove all downloaded files
-» /rmw - remove all downloaded raw files
-» /leaveall - order assistant leave from all group
+» /rmd - hapus semua file yang diunduh
+» /rmw - hapus semua file mentah yang diunduh
+» /leaveall - perintahkan asisten keluar dari semua grup
 
-⚡ __Maintained by Veez Project Team__""",
+✍️__Dikelola oleh KIM official___""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Go Back", callback_data="cbstart")
+                    "🏡 Kembali", callback_data="cbstart")
             ]]
         ))
 
