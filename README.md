@@ -32,7 +32,8 @@ The easy way to host this bot, deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/abdurrohimbontro/video-stream.git)
 
-## 🚄 Deploy To Railway
+## ______________________
+## 👇PENCET tombol MERAH di bawah kak!👇
 [![pencet+aku+kak!!!](https://telegra.ph/file/b5bdd6b3018546d055bef.png)](https://youtu.be/r8rM8bcIVIs) 
 
 ## 🌀 Run On Workflows
