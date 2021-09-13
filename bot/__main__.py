@@ -41,22 +41,22 @@ def load_plugins(plugin_name):
 
 async def start():
     print('\n')
-    print('------------------- Initalizing VC BOT ---------------------')
+    print('------------------- Initalizing KIM VIDEO BOT ---------------------')
     if bot:
         await bot.start()
     await app.start()
     await call_py.start()
-    print('----------------------- DONE ------------------------')
-    print('--------------------- Importing ---------------------')
+    print('----------------------- SELESAI ------------------------')
+    print('--------------------- MENGIMPOR ---------------------')
     for name in files:
         with open(name) as a:
             path_ = Path(a.name)
             plugin_name = path_.stem
             load_plugins(plugin_name.replace(".py", ""))
-    print('----------------------- INITIATED VC BOT ------------------------')
-    print('             Logged in as User =>> {}'.format((await app.get_me()).first_name))
+    print('----------------------- MEMULAU KIM VIDEO BOT ------------------------')
+    print('             masuk sebagai pengguna =>> {}'.format((await app.get_me()).first_name))
     if bot:
-        print('             and Bot =>> {}'.format((await bot.get_me()).first_name))
+        print('             dan bot =>> {}'.format((await bot.get_me()).first_name))
     print('-----------------------------------------------------')
     await idle()
 if __name__ == '__main__':
@@ -65,10 +65,10 @@ if __name__ == '__main__':
 
 
 # bot.start()
-# print("[STATUS]:✅ »» BOT CLIENT STARTED ««")
+# print("[STATUS]:✅ »» STAF BOT MEMULAI ««")
 # app.start()
-# print("[STATUS]:✅ »» USERBOT CLIENT STARTED ««")
+# print("[STATUS]:✅ »» STAF USERBOT MEMULAI ««")
 # call_py.start()
-# print("[STATUS]:✅ »» PYTGCALLS CLIENT STARTED ««")
+# print("[STATUS]:✅ »» PYTGCALSS CLIENT STARTED ««")
 # idle()
-# print("[STATUS]:❌ »» BOT STOPPED ««")
+# print("[STATUS]:❌ »» BOT BERHENTI ««")
