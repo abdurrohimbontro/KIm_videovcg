@@ -1,34 +1,34 @@
-## NOBAR STREAMING BOT
+## NOBAR DI OBROLAN SUARA TELEGRAM
 
 ![](https://telegra.ph/file/356a57a35a916d9e117db.png)
 
-## 🛠 Commands:
-- /vplay (reply to video/give yt url) - to start video streaming
-- /vstop - to stop video streaming
-- /song (song name) - to download song
-- /vsong (video name) - to download video
-- /vjoin - invite the assistant join to your group
-- /vleave - order the assistant to leave from your group
+## 🛠 perintah:
+- /vplay (reply ke video/berikan url video) - untuk memulai video streaming
+- /vstop - untuk stop video streaming
+- /song (judul lagu) - untuk download lagu
+- /vsong (judul video) - untuk download video
+- /vjoin - mengundang asisten untuk bergabung ke grup
+- /vleave - meminta asisten untuk meninggalkan groupmu
 - /lyric (query) - lyric scrapper
-- /tts (reply to text) - text to speech
-- /alive - check the bot alive status
-- /ping - check the bot ping status
-- /uptime - check the bot uptime status
-- /sysinfo - show the bot system information
+- /tts (reply ke teks) - texs ke suara
+- /alive - mengecek status alive bot
+- /ping - mengecek status Ping bot
+- /uptime - mengecek status waktu aktif bot
+- /sysinfo - melihat informasi sistem bot
 
-## 🧙🏻‍♂️ Sudo Only:
-- /rmd - clear all downloaded files
-- /rmw - clear all downloaded raw files
-- /leaveall - order the assistant to leave from all group
+## 🧙🏻‍♂️ admin sudo:
+- /rmd - bersihkan semua file download
+- /rmw - bersihkan semua file download mentah
+- /leaveall - meminta asisten meninggalkan semua grup
 
-📝 Note: From now, /vstream & /vstop command can only be used by group admins.
+📝 Note: mulai sekarang, /vstream & /vstop perintah untuk admin saja .
 
-## 🧪 Get STRING_SESSION from below:
+## 🧪 dapatkan STRING_SESSION from sini:
 
-TAP THIS: [![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@levinalab/StringSession#main.py)
+TAP THIS: [![GenerateString](https://img.shields.io/badge/repl.it-generateString-bluered)](https://replit.com/@abdurrohimbontro/StringSession#main.py)
 
-## 💜 Deploy To Heroku
-The easy way to host this bot, deploy to Heroku
+## 💜 Deploy ke Heroku
+Jalan mudah hosting bot ini, deploy ke Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/abdurrohimbontro/video-stream.git)
 
@@ -36,7 +36,7 @@ The easy way to host this bot, deploy to Heroku
 ## 👇PENCET tombol MERAH di bawah kak!👇
 [![pencet+aku+kak!!!](https://telegra.ph/file/b5bdd6b3018546d055bef.png)](https://youtu.be/r8rM8bcIVIs) 
 
-## 🌀 Run On Workflows
+## 🌀 boso enggres ngisor iki
 
 - fork this repository
 - Go to your forked repository settings
