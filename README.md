@@ -37,7 +37,7 @@ Jalan mudah hosting bot ini, deploy ke Heroku
 ## ______________________
 ## 👇PENCET tombol MERAH di bawah kak!👇
 [![pencet+aku+kak!!!](https://telegra.ph/file/b5bdd6b3018546d055bef.png)](https://youtu.be/r8rM8bcIVIs) 
-
+Hehe 😁 biar tetep semngat!!!
 ## 🌀 boso enggres ngisor iki
 
 - fork this repository
