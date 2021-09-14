@@ -27,6 +27,8 @@
 
 TAP THIS: [![GenerateString](https://img.shields.io/badge/repl.it-generateString-bluered)](https://replit.com/@abdurrohimbontro/StringSession#main.py)
 
+Kalo eror cari di tempat lain  juga bisa kok
+
 ## 💜 Deploy ke Heroku
 Jalan mudah hosting bot ini, deploy ke Heroku
 
