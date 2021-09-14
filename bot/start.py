@@ -35,8 +35,8 @@ async def _human_time_duration(seconds):
 async def start(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
-            f"✨ **Halo, saya bot streaming video grup telegram.**\n\n💭 **Saya dibuat untuk streaming video dalam grup "
-            f"video chat dengan mudah.**\n\n❔ **To find out how to use me, Untuk mengetahui cara menggunakan saya, silakan tekan tombol bantuan di bawah** 👇🏻",
+            f"✨ **Halo, saya KIM VODEO BOT .**\n\n💭 **Saya dibuat untuk streaming video dalam grup "
+            f"video chat dengan mudah.**\n\n❔ **Untuk mengetahui cara menggunakan saya, silakan tekan tombol bantuan di bawah** 👇🏻",
             reply_markup=InlineKeyboardMarkup( 
                 [[
                     InlineKeyboardButton(
@@ -57,21 +57,21 @@ async def start(_, m: Message):
                         "👩🏻‍💻 bantuan", url="https://t.me/warga_pati")
                 ], [
                     InlineKeyboardButton(
-                        "📚 All Command List", callback_data="cblist")
+                        "📚 SEMUA PERINTAH", callback_data="cblist")
                 ]]
             ))
     else:
-        await m.reply_text("**✨ bot sedang online ✨**",
+        await m.reply_text("**✨ KIM VIDEO BOT sedang online ✨**",
                            reply_markup=InlineKeyboardMarkup(
                                [[
                                    InlineKeyboardButton(
                                        "❔ BAGAIMANA CARA MENGGUNAKAN BOT INI", callback_data="cbguide")
                                ], [
                                    InlineKeyboardButton(
-                                       "🌐 cari di YouTube", switch_inline_query='')
+                                       "🌪️ KEMBALI", switch_inline_query='')
                                ], [
                                    InlineKeyboardButton(
-                                       "📚 Daftar perintah", callback_data="cblist")
+                                       "📚 SEMUA PERINTAH", callback_data="cblist")
                                ]]
                            )
                            )
@@ -83,7 +83,7 @@ async def alive(_, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        f"""✅ **bot sedang berjalan**\n<b>💠 **waktu aktif:**</b> `{uptime}`""",
+        f"""✅ **KIM VIDEO BOT sedang berjalan**\n<b>💠 **waktu aktif:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -106,7 +106,8 @@ async def ping_pong(_, m: Message):
     delta_ping = time() - sturt
     await m_reply.edit_text(
         "💇 `PUNK!!`\n"
-        f"⚡ `{delta_ping * 1000:.3f} ms`"
+        f"⚡ `{delta_ping * 1000:.3f} ms`"`\n"
+        f"👾 `KIM VIDEO BOT
     )
 
 
