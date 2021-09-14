@@ -10,7 +10,7 @@ load_dotenv()
 class Veez(object):
         admins = {}
         BOT_TOKEN = getenv("BOT_TOKEN", None)
-        CHANNEL = int(os.getenv("CHANNEL", "Curhatanmassa"))
+        CHANNEL = int(os.getenv('CHANNEL',123456))
         API_ID = int(getenv("API_ID", "7945064"))
         API_HASH = getenv("API_HASH", "9633212b94527280d0cb30f913fe0790")
         SESSION_NAME = getenv("SESSION_NAME", None)
