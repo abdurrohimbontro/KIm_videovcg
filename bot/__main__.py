@@ -41,7 +41,7 @@ def load_plugins(plugin_name):
 
 async def start():
     print('\n')
-    print('------------------- Initalizing KIM VIDEO BOT ---------------------')
+    print('------------------- Initalizing bot ---------------------')
     if bot:
         await bot.start()
     await app.start()
