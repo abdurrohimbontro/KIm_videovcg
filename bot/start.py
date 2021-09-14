@@ -106,8 +106,8 @@ async def ping_pong(_, m: Message):
     delta_ping = time() - sturt
     await m_reply.edit_text(
         "💇 `PUNK!!`\n"
-        f"⚡ `{delta_ping * 1000:.3f} ms`"`\n"
-        f"👾 `KIM VIDEO BOT
+        f"⚡ `{delta_ping * 1000:.3f} ms`\n"
+        f"👾 `KIM VIDEO BOT`"
     )
 
 
