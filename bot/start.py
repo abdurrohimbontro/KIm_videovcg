@@ -57,7 +57,7 @@ async def start(_, m: Message):
                         "👩🏻‍💻 bantuan", url="https://t.me/warga_pati")
                 ], [
                     InlineKeyboardButton(
-                        "📚 SEMUA PERINTAH", callback_data="cblist")
+                        "📑 SEMUA PERINTAH", callback_data="cblist")
                 ]]
             ))
     else:
@@ -71,7 +71,7 @@ async def start(_, m: Message):
                                        "🌪️ KEMBALI", switch_inline_query='')
                                ], [
                                    InlineKeyboardButton(
-                                       "📚 SEMUA PERINTAH", callback_data="cblist")
+                                       "📑 SEMUA PERINTAH", callback_data="cblist")
                                ]]
                            )
                            )
