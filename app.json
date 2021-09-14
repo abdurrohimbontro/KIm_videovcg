@@ -1,15 +1,15 @@
 {
     "name": "Kim video bot",
-    "description": "bot to stream video on telegram video chat, powered by pytgcalls and pyrogram",
+    "description": "bot untuk streaming video di obrolan Suara telegram, 😉",
     "logo": "https://telegra.ph/file/e4f81e96a07225a6af7e8.png",
     "keywords": [
         "pytgcalls",
         "telegram bot",
         "video stream"
     ],
-    "website": "https://t.me/levinachannel",
+    "website": "https://t.me/Curhatanmassa",
     "repository": "https://github.com/abdurrohimbontro/video-stream",
-    "success_url": "https://t.me/dlwrml",
+    "success_url": "https://t.me/warga_pati",
     "env": {
         "API_ID": {
             "description": "your APP_ID from my.telegram.org",
