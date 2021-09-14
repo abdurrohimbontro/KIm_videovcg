@@ -1,5 +1,5 @@
 {
-    "name": "KIM VIDEO BOT",
+    "name": "Kim video bot",
     "description": "bot to stream video on telegram video chat, powered by pytgcalls and pyrogram",
     "logo": "https://telegra.ph/file/e4f81e96a07225a6af7e8.png",
     "keywords": [
