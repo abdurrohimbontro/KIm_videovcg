@@ -35,7 +35,7 @@ async def give_sysinfo(client, message):
     psutil.disk_io_counters()
     disk = f"{humanbytes(du.used)} / {humanbytes(du.total)} " f"({du.percent}%)"
     cpu_len = len(psutil.Process().cpu_affinity())
-    somsg = f"""**🖥 KIM BOT INFO SISTEM**
+    somsg = f"""**🖥  INFO SISTEM**
     
 **PlatForm :** `{splatform}`
 **PlatForm - Release :** `{platform_release}`
@@ -49,5 +49,6 @@ async def give_sysinfo(client, message):
 **CPU :** `{cpu_len}`
 **CPU FREQ :** `{cpu_freq}`
 **DISK :** `{disk}`
+----kim-video-bot✍️----
          """
     await message.reply(somsg)
