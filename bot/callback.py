@@ -22,7 +22,7 @@ async def cbguide(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Kembali", callback_data="cbstart")
+                    "🔙 Kembali", callback_data="cbstart")
             ]]
         ))
 
@@ -52,7 +52,7 @@ async def cbstart(_, query: CallbackQuery):
                     "👩🏻‍💻 Bantuan", url="https://t.me/warga_pati")
             ], [
                 InlineKeyboardButton(
-                    "📚 Semua perintah", callback_data="cblist")
+                    "📑 Semua perintah", callback_data="cblist")
             ]]
         ))
 
@@ -72,7 +72,7 @@ ___Bot ini dilisensikan di bawah Lisensi GNU-GPL 3.0____""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Kembali", callback_data="cbstart")
+                    "🔙 Kembali", callback_data="cbstart")
             ]]
         ),
         disable_web_page_preview=True
@@ -82,7 +82,7 @@ ___Bot ini dilisensikan di bawah Lisensi GNU-GPL 3.0____""",
 @Client.on_callback_query(filters.regex("cblist"))
 async def cblist(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""📚 semua perintah:
+        f"""📑 semua perintah:
 
 » /vplay (balas ke video atau yt/url langsung) - untuk streaming video
 » /vstop - hentikan streaming video
@@ -118,7 +118,7 @@ HANYA SUDO:
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
-                    "🏡 Kembali", callback_data="cbstart")
+                    "🔙 Kembali", callback_data="cbstart")
             ]]
         ))
 
