@@ -50,5 +50,5 @@ async def give_sysinfo(client, message):
 **CPU FREQ :** `{cpu_freq}`
 **DISK :** `{disk}`
 ~~~~~~By KIM VIDEO BOT✍️~~~~~~
-              """
+         """
     await message.reply(somsg)
