@@ -32,7 +32,7 @@ Kalo eror cari di tempat lain  juga bisa kok
 ## 💜 Deploy ke Heroku
 Jalan mudah hosting bot ini, deploy ke Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/abdurrohimbontro/video-stream.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/abdurrohimbontro/Kim_videovcg)
 
 ## ______________________
 ## 👇PENCET tombol MERAH di bawah kak!👇
